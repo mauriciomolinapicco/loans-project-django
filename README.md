@@ -19,6 +19,5 @@ Sistema desarrollado en Django para gestión de solicitudes de préstamos con:
 | Tecnología | Versión | Uso |
 |------------|---------|-----|
 | Django | 4.2 | Backend principal |
-| PostgreSQL | 14 | Base de datos |
 | Tailwind CSS | 3.3 | Diseño UI |
 | Python-dotenv | 1.0 | Variables de entorno |
