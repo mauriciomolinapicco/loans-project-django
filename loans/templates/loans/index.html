@@ -1,0 +1,41 @@
+{% extends "loans/layout.html" %}
+{% load widget_tweaks %}
+
+{% block script %}
+{% endblock %}
+
+
+{% block body %}
+<div class="flex flex-col items-center">
+    <h1 class="mb-4">Moni Prestamos</h1>
+    <h3>Hace tu consulta y sabe al instante si tu prestamo es aceptado</h3>
+</div>
+    
+
+    <form method="post" action="{% url 'new_application' %}" class="max-w-lg mx-auto p-6 mt-6 rounded-lg shadow-md bg-gray-800">
+        {% csrf_token %}
+    
+        {% for field in form %}
+            <div class="mb-4">
+                <label for="{{ field.id_for_label }}" class="block text-sm font-medium">{{ field.label }}</label>
+                <div class="mt-1">
+                    <span>
+                        {{ field|add_class:"block w-full px-4 py-2 rounded-md shadow-sm bg-gray-700"  }}
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+            {% for message in messages %}
+            <div class="alert alert-danger flex items-center my-4">
+                {{message}}
+            </div>
+            {% endfor %}
+            
+        <div class="mt-6">
+            <button type="submit" class="w-full py-2 px-4 btn-warning font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Consultar prestamo
+            </button>
+        </div>
+    </form>
+
+{% endblock %}

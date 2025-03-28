@@ -1,0 +1,60 @@
+{% extends "loans/layout.html" %}
+
+{% block body %}
+<div class="max-w-3xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg mt-10">
+    <h2 class="text-2xl font-bold text-center mb-6">Detalle de la Aplicación</h2>
+
+    {% if application.first_name %}
+        <div class="space-y-4">
+            <div>
+                <strong>Nombre:</strong>
+                <p>{{ application.first_name }} {{ application.last_name }}</p>
+            </div>
+            
+            <div>
+                <strong>DNI:</strong>
+                <p>{{ application.dni }}</p>
+            </div>
+            
+            <div>
+                <strong>CUIL:</strong>
+                <p>{{ application.cuil }}</p>
+            </div>
+
+            <div>
+                <strong>Correo Electrónico:</strong>
+                <p>{{ application.email }}</p>
+            </div>
+
+            <div>
+                <strong>Género:</strong>
+                <p>{{ application.get_gender_display }}</p>
+            </div>
+
+            <div>
+                <strong>Monto Solicitado:</strong>
+                <p>${{ application.amount }}</p>
+            </div>
+
+            <div>
+                <strong>Aprobada:</strong>
+                <p>{{ application.is_approved|yesno:"Si,No" }}</p>
+            </div>
+
+            <div>
+                <strong>Fecha de Creación:</strong>
+                <p>{{ application.created_date|date:"d/m/Y H:i" }}</p>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center">
+            <a href="{% url 'index' %}" class="text-blue-500 hover:text-blue-700">Volver a la pagina principal</a>
+        </div>
+    {% else %}
+        <div class="text-center mt-4">
+            ERROR: No se encontro la aplicacion con el codigo ingresado
+        </div>
+
+    {% endif %}
+</div>
+{% endblock %}
