@@ -28,7 +28,7 @@ Sistema desarrollado en Django para gestión de solicitudes de préstamos con:
 Clonar el repositorio:
 
 ```bash
-git clone git clone https://github.com/mauriciomolinapicco/loans-project-django.git
+git clone https://github.com/mauriciomolinapicco/loans-project-django.git
 cd loans-project-django
 ```
 
