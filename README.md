@@ -50,7 +50,7 @@ docker-compose up
 Esto iniciará el servidor en http://127.0.0.1:8001/.
 
 ## Uso
-Página principal: Los usuarios pueden acceder al formulario de solicitud de préstamo y completar la información.
+Página principal: Los usuarios pueden acceder al formulario de solicitud de préstamo y completar la información. Ademas pueden buscar una aplicacion especifica con el codigo unico de aplicacion
 Panel de administración: Los administradores pueden gestionar las solicitudes, ver detalles, aprobar o rechazar solicitudes, y eliminar registros.
 
 ## Pruebas
