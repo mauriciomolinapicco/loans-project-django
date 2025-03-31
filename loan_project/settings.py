@@ -116,7 +116,7 @@ LANGUAGES = [
 LANGUAGE_CODE = 'es'
 USE_I18N = True
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
